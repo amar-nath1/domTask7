@@ -1,69 +1,23 @@
-let elem=document.querySelector(".list-group")
-// Parent Node
-// console.log(elem.parentNode)
+// creating element before item lister
 
-// // elem.parentNode.style.backgroundColor='Bisque'
+let newp1=document.createElement('p')
+let textforp1=document.createTextNode('HEllo')
 
-// console.log(elem.parentNode.parentNode)
+newp1.appendChild(textforp1)
 
-// // Parent Element 
-// elem.parentElement.style.backgroundColor='Bisque'
+let insaf=document.querySelector('header .container')
+let insbef=document.querySelector('#header-title')
 
-// //Child Nodes
-// console.log(elem.childNodes)
+insaf.insertBefore(newp1,insbef)
 
-// // Children
-// console.log(elem.children)
+// creating element before item1
+let lifirst=document.createElement("li")
+lifirst.className='list-group-item'
+let litem=document.createTextNode('HEllo')
 
-// // first child
-// console.log(elem.firstChild)
+lifirst.appendChild(litem)
 
-// firstElementChild
+let insbefore=document.getElementsByClassName('list-group-item')[0]
+let insafter=insbefore.parentElement
 
-// console.log(elem.firstElementChild)
-// elem.firstElementChild.textContent='Hello 1' 
-
-// // last child
-// console.log(elem.firstChild)
-
-// //lastelmentchild
-
-// console.log(elem.lastElementChild)
-// elem.lastElementChild.textContent='Hello 4'
-
-// nextsibling
-// console.log(elem.nextSibling)
-
-// nextElementSibling
-// console.log(elem.nextElementSibling)
-
-// previoussibling
-// console.log(elem.nextSibling)
-
-// previousElementSibling
-// console.log(elem.previousElementSibling)
-
-// Create Element( Creating a Div)
-
-let newdiv= document.createElement('div')
-
-
-// Add class name to the element
-newdiv.className='testdivclass'
-
-//Add id to the element
-newdiv.id='testdivid'
-
-// Set attribute
-newdiv.setAttribute('title','testdivtitle')
-
-// create text node
-let newdivtext = document.createTextNode('This is test text node')
-
-// Add text to div
-newdiv.appendChild(newdivtext)
-
-console.log(newdiv)
-
-
-
+insafter.insertBefore(lifirst,insbefore);
